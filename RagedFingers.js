@@ -134,7 +134,3 @@ function resetStats(){
   alert("Stats Reset")
   clearInterval(timer);
 }
-
-function showPage(){
-  document.querySelector('.LoadingAnimation').style.opacity="0";
-}
