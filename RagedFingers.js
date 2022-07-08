@@ -37,6 +37,20 @@ function generateRandomWord(length) {
   return result;
 }
 //Some meaningful paragraph
+
+async function getParagraphFromDictionary() {
+  const response = await fetch('English_25k.json');
+  const res = await response.json();
+  var result=""
+  for(i=0;i<150;i++){
+    let randNum=Math.floor(Math.random() * res.words.length)
+    result+=res.words[randNum]+" "
+  }
+  console.log(result);
+  return result;
+}
+// getParagraphFromDictionary();
+
 async function getParagraph() {
   const response = await fetch(RANDOM_PARAGRAPH_API_URL);
   const res = await response.text();
@@ -45,7 +59,7 @@ async function getParagraph() {
 }
 // getParagraph();
 async function renderParagraph() {
-  const temp = await getParagraph();
+  const temp = await getParagraphFromDictionary();
   // var temp=textBox.innerHTML;
   textBox.innerHTML = "";
   temp.split("").forEach((char) => {
@@ -133,4 +147,8 @@ function resetStats(){
   renderParagraph();
   alert("Stats Reset")
   clearInterval(timer);
+}
+
+function showPage(){
+  document.querySelector('.LoadingAnimation').style.opacity="0";
 }
