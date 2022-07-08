@@ -1,0 +1,266 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: consolas;
+    /* border: 2px solid black; */
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+/* .LoadingAnimation */
+.LoadingAnimation{
+    /* border: 2px solid black; */
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: fixed;
+    background-color: white;
+    opacity: 0;
+    animation: LoadingAnimation0 2.25s;
+}
+@keyframes LoadingAnimation0 {
+    0%{
+        z-index: 1;
+        opacity: 1;
+    }
+    80%{
+        z-index: 1;
+        opacity: 1;
+    }
+    100%{
+        z-index: 0;
+        opacity: 0;
+    }
+}
+.forAnimation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: fit-content;
+}
+
+.main{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+}
+.theme:hover,.heading:hover{
+    cursor: pointer;
+}
+.heading{
+    display: flex;
+    position: relative;
+}
+.cursor-ani{
+    position: absolute;
+    border: 2px solid black;
+    height: 100%;
+    width: 4px;
+    top: 0;
+    right: -3%;
+    animation: text-ani 1.25s;
+    animation-delay: 0.25s;
+    transform: scale(1.1);
+    /* box-shadow: inset 3px 3px gray; */
+}
+@keyframes text-ani {
+    0%{
+        transform: scale(1.1);
+        right: -3%;
+    }
+    /* 5%{
+        transform: scale(1);
+    } */
+    50%{
+        right:100%;
+        transform: scale(1);
+    }
+    /* 95%{
+        transform: scale(1);
+    } */
+    100%{
+        right:-3%;
+        transform: scale(1);
+    }
+}
+.heading img{
+    height: 50px;
+}
+.heading h1{
+    padding: 3px;
+    margin: auto;
+}
+.heading h4{
+    position: absolute;
+    top: 100%;
+}
+.theme{
+    display: flex;
+}
+.theme img{
+    height: 35px;
+}
+.theme h3{
+    padding: 3px;
+    margin: auto;
+}
+.top{
+    display: flex;
+    /* justify-content: space-between; */
+}
+.top div{
+    margin: auto;
+}
+.text-gen-settings .include{
+    display: flex;
+}
+.in,.ty,.ti{
+    padding: 0 5px;
+    text-align: right;
+}
+.in1,.ty1,.ti-15{
+    margin-left: auto;
+}
+.text-gen-settings div div:hover{
+    color: rgb(49, 0, 245);
+    font-weight: 700;
+    cursor: pointer;
+}
+.top .type{
+    display: flex;
+}
+.top .time{
+    display: flex;
+}
+input{
+    border: none;
+    width: 65px;
+}
+input:focus{
+    outline: none;
+    border: none;
+}
+::placeholder,input { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+    font-weight: 600;
+    font-size: 16px;
+}
+.Statistics-Settings-Box{
+    cursor: pointer;
+}
+.middle{
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    text-align: center;
+    justify-content: center;
+}
+.language{
+    margin: 20px;
+    cursor: pointer;
+    /* width: fit-content; */
+}
+.language select{
+    font-size: 18px;
+}
+.language .lan-icon{
+    border: 2px solid black !important;
+    padding: 2px;
+}
+.Statistics{
+    display: flex;
+    font-size: 20px;
+    justify-content: space-evenly;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 0;
+}
+.text{
+    height: 200px;
+    overflow: scroll;
+    line-height: 35px;
+    font-size: 25px;
+    /* background-color: rgb(237, 236, 236); */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: inset 3px 3px 400px rgb(234, 225, 225);
+}
+.text::-webkit-scrollbar{
+    width: 0;
+}
+.active{
+
+    /*Style pattern 01*/
+    /* background-color: rgb(58, 58, 58);
+    color: white; */
+
+    /*Style pattern 02*/
+    font-size: larger;
+    border-bottom: 7px solid black;
+}
+.correct{
+    color: green;
+}
+.incorrect{
+    color: red;
+}
+
+.input-field{
+    opacity: 0;
+    height: 0;
+    margin: 10px 0;
+    width: 100%;
+    border: 2px solid black;
+    color: green;
+    border: 2px solid green;
+    background-color: rgba(138, 233, 138, 0.652);
+    padding: 5px 0;
+}
+.input-field:focus{
+    border: 2px solid green;
+    background-color: rgba(138, 233, 138, 0.652);
+}
+.refresh{
+    cursor: pointer;
+    padding: 5px;
+    transition: 1s;
+}
+.refresh img{
+    height: 30px;
+}
+.bottom{
+    margin-top: 30px;
+    justify-self: center;
+    text-align: center;
+}
+.bottom img{
+    height: 15px;
+}
+.bottom a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/*Loading Animation*/
+
+@keyframes LoadingAnimation {
+    0%{
+        transform: translate(50%,50%);
+        z-index: 1;
+    }
+    100%{
+        position: initial;
+        top: auto;
+        left: auto;
+        transform: translate(0,0);
+        z-index: 0;
+    }
+}
