@@ -42,7 +42,7 @@ async function getParagraphFromDictionary() {
   const response = await fetch('English_25k.json');
   const res = await response.json();
   var result=""
-  for(i=0;i<150;i++){
+  for(i=0;i<190;i++){
     let randNum=Math.floor(Math.random() * res.words.length)
     result+=res.words[randNum]+" "
   }
