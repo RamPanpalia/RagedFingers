@@ -4,6 +4,7 @@ var MaxTime = 60;
 var timeleft = MaxTime;
 var mistakes = 0;
 var isTyping = false;
+var timer
 
 // alert()
 
@@ -12,11 +13,14 @@ const RANDOM_JOKES_API_URL = "https://api.chucknorris.io/jokes/random";
 const RANDOM_WORD_API_URL = "https://random-word-api.herokuapp.com/word";
 const RANDOM_PARAGRAPH_API_URL = "http://metaphorpsum.com/paragraphs/1/13";
 
-var MAIN_URL=document.querySelector('#TextType').value
+var MAIN_URL=localStorage.getItem("RAGED_FINGERS_TEMP_URL")===null?document.querySelector('#TextType').value:localStorage.getItem("RAGED_FINGERS_TEMP_URL")
+
+document.querySelector('#TextType').value=MAIN_URL
 
 document.querySelector('#TextType').addEventListener("change",()=>{
   MAIN_URL=document.querySelector('#TextType').value
-  renderParagraph();
+  localStorage.setItem("RAGED_FINGERS_TEMP_URL",MAIN_URL)
+  resetStats();
 })
 //Completely random words
 function getRandomParagraph(length) {
@@ -148,17 +152,17 @@ function initTimer() {
   }
   
 function resetStats(){
-  timeleft=MaxTime;
-  document.querySelector('.time-left').innerHTML=timeleft;
-  document.querySelector('.WPM').innerHTML="0"
-  document.querySelector('.CPM').innerHTML="0"
-  document.querySelector('.Mistakes').innerHTML="0"
-  document.querySelector('.text').innerHTML=""
-  inputField.value="";
+  // timeleft=MaxTime;
+  // document.querySelector('.time-left').innerHTML=timeleft;
+  // document.querySelector('.WPM').innerHTML="0"
+  // document.querySelector('.CPM').innerHTML="0"
+  // document.querySelector('.Mistakes').innerHTML="0"
+  // document.querySelector('.text').innerHTML=""
+  // inputField.value="";
   // renderParagraph();
-  // alert("Stats Reset")
   location.reload();
-  clearInterval(timer);
+  // clearInterval(timer);
+  // alert("Stats Reset")
 }
 
 function showPage(){
