@@ -162,16 +162,16 @@ function initTimer() {
 }
 
 function resetStats() {
-  // timeleft=MaxTime;
-  // document.querySelector('.time-left').innerHTML=timeleft;
-  // document.querySelector('.WPM').innerHTML="0"
-  // document.querySelector('.CPM').innerHTML="0"
-  // document.querySelector('.Mistakes').innerHTML="0"
-  // document.querySelector('.text').innerHTML=""
-  // inputField.value="";
+  timeleft=MaxTime;
+  document.querySelector('.time-left').innerHTML=timeleft;
+  document.querySelector('.WPM').innerHTML="0"
+  document.querySelector('.CPM').innerHTML="0"
+  document.querySelector('.Mistakes').innerHTML="0"
+  document.querySelector('.text').innerHTML=""
+  inputField.value="";
   // renderParagraph();
   location.reload();
-  // clearInterval(timer);
+  clearInterval(timer);
   // alert("Stats Reset")
 }
 

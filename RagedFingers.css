@@ -147,6 +147,8 @@ body {
 .top {
     display: flex;
     /* justify-content: space-between; */
+    /* flex-wrap: wrap; */
+    height: fit-content;
 }
 
 .top div {
@@ -273,6 +275,16 @@ input {
 .text::-webkit-scrollbar {
     width: 0;
 }
+/* Hide scrollbar for Chrome, Safari and Opera */
+.text::-webkit-scrollbar {
+    display: none;
+  }
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+.text {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 .active {
 
@@ -352,4 +364,18 @@ input {
         transform: translate(0, 0);
         z-index: 0;
     }
+}
+
+@media screen and (max-width:1200px) {
+
+.top{
+    flex-direction: column;
+}
+/* .theme{
+    display: none;
+}
+.text-gen-settings{
+    display: none;
+} */
+
 }
