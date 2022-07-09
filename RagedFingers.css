@@ -370,6 +370,15 @@ input {
 
 .top{
     flex-direction: column;
+    /* height: 300px; */
+    justify-content: space-around;
+}
+.top .heading,.theme,.text-gen-settings{
+    position: initial;
+    margin: 40px auto;
+}
+.text{
+    font-size: 22px;
 }
 /* .theme{
     display: none;
@@ -378,4 +387,11 @@ input {
     display: none;
 } */
 
+}
+
+@media screen and (max-width:450px) {
+    .text{
+        font-size: 20px;
+    }
+    
 }
