@@ -1,25 +1,28 @@
 const textBox = document.querySelector(".text"),
-   inputField = document.querySelector(".input-field");
+  inputField = document.querySelector(".input-field");
 var MaxTime = 60;
 var timeleft = MaxTime;
 var mistakes = 0;
 var isTyping = false;
-var timer
+var timer;
 
 const RANDOM_QUOTE_API_URL = "http://api.quotable.io/random";
 const RANDOM_JOKES_API_URL = "https://api.chucknorris.io/jokes/random";
 const RANDOM_WORD_API_URL = "https://random-word-api.herokuapp.com/word";
 const RANDOM_PARAGRAPH_API_URL = "http://metaphorpsum.com/paragraphs/1/13";
 
-var MAIN_URL=localStorage.getItem("RAGED_FINGERS_TEMP_URL")===null?document.querySelector('#TextType').value:localStorage.getItem("RAGED_FINGERS_TEMP_URL")
+var MAIN_URL =
+  localStorage.getItem("RAGED_FINGERS_TEMP_URL") === null
+    ? document.querySelector("#TextType").value
+    : localStorage.getItem("RAGED_FINGERS_TEMP_URL");
 
-document.querySelector('#TextType').value=MAIN_URL
+document.querySelector("#TextType").value = MAIN_URL;
 
-document.querySelector('#TextType').addEventListener("change",()=>{
-  MAIN_URL=document.querySelector('#TextType').value
-  localStorage.setItem("RAGED_FINGERS_TEMP_URL",MAIN_URL)
+document.querySelector("#TextType").addEventListener("change", () => {
+  MAIN_URL = document.querySelector("#TextType").value;
+  localStorage.setItem("RAGED_FINGERS_TEMP_URL", MAIN_URL);
   resetStats();
-})
+});
 //Completely random words
 function getRandomParagraph(length) {
   var result = "";
@@ -51,10 +54,10 @@ function generateRandomWord(length) {
 async function getParagraphFromDictionary() {
   const response = await fetch(MAIN_URL);
   const res = await response.json();
-  var result=""
-  for(i=0;i<250;i++){
-    let randNum=Math.floor(Math.random() * res.words.length)
-    result+=res.words[randNum]+" "
+  var result = "";
+  for (i = 0; i < 250; i++) {
+    let randNum = Math.floor(Math.random() * res.words.length);
+    result += res.words[randNum] + " ";
   }
   console.log(result);
   return result;
@@ -72,12 +75,12 @@ async function renderParagraph() {
   const temp = await getParagraphFromDictionary();
   // var temp=textBox.innerHTML;
   textBox.innerHTML = "";
-  var temp2=""
+  var temp2 = "";
   temp.split("").forEach((char) => {
     let span = `<span>${char}</span>`;
     temp2 += span;
   });
-  textBox.innerHTML=temp2;
+  textBox.innerHTML = temp2;
   textBox.querySelectorAll("span")[0].classList.add("active");
   document.addEventListener("keydown", () => inputField.focus());
   textBox.addEventListener("click", () => inputField.focus());
@@ -136,20 +139,20 @@ inputField.addEventListener("input", () => {
 });
 
 function initTimer() {
-  if(timeleft > 0) {
-      timeleft--;
-      document.querySelector('.time-left').innerText = timeleft;
-      mistakes=document.querySelector(".Mistakes").innerHTML;
-      document.querySelector(".WPM").innerHTML =
+  if (timeleft > 0) {
+    timeleft--;
+    document.querySelector(".time-left").innerText = timeleft;
+    mistakes = document.querySelector(".Mistakes").innerHTML;
+    document.querySelector(".WPM").innerHTML =
       MaxTime == timeleft
         ? 0
         : Math.round(((charIndex - mistakes) / 5 / (MaxTime - timeleft)) * 60);
   } else {
-      clearInterval(timer);
-    }
+    clearInterval(timer);
   }
-  
-function resetStats(){
+}
+
+function resetStats() {
   // timeleft=MaxTime;
   // document.querySelector('.time-left').innerHTML=timeleft;
   // document.querySelector('.WPM').innerHTML="0"
@@ -163,6 +166,6 @@ function resetStats(){
   // alert("Stats Reset")
 }
 
-function showPage(){
-  document.querySelector('.LoadingAnimation').style.opacity="0";
+function showPage() {
+  document.querySelector(".LoadingAnimation").style.opacity = "0";
 }

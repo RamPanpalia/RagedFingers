@@ -1,15 +1,17 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: consolas;
     /* border: 2px solid black; */
 }
-body{
+
+body {
     height: 100%;
     width: 100%;
 }
+
 /* .LoadingAnimation */
-.LoadingAnimation{
+.LoadingAnimation {
     /* border: 2px solid black; */
     height: 100%;
     width: 100%;
@@ -19,49 +21,58 @@ body{
     opacity: 0;
     animation: LoadingAnimation0 2.25s;
 }
-.LoadingAnimationInTextBox{
+
+.LoadingAnimationInTextBox {
     height: 100%;
     width: 100%;
     z-index: -1;
     position: absolute;
 }
+
 @keyframes LoadingAnimation0 {
-    0%{
+    0% {
         z-index: 1;
         opacity: 1;
     }
-    80%{
+
+    80% {
         z-index: 1;
         opacity: 1;
     }
-    100%{
+
+    100% {
         z-index: 0;
         opacity: 0;
     }
 }
-.forAnimation{
+
+.forAnimation {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: fit-content;
 }
 
-.main{
+.main {
     padding-top: 20px;
     display: flex;
     flex-direction: column;
     width: 90%;
     margin: auto;
 }
-.theme:hover,.heading:hover{
+
+.theme:hover,
+.heading:hover {
     cursor: pointer;
 }
-.heading{
+
+.heading {
     display: flex;
     position: relative;
 }
-.cursor-ani{
+
+.cursor-ani {
     position: absolute;
     border: 2px solid black;
     border-left: 4px solid black;
@@ -74,126 +85,162 @@ body{
     transform: scale(1.1);
     /* box-shadow: inset 3px 3px gray; */
 }
+
 @keyframes text-ani {
-    0%{
+    0% {
         transform: scale(1.1);
         right: -3%;
     }
+
     /* 5%{
         transform: scale(1);
     } */
-    50%{
-        right:100%;
+    50% {
+        right: 100%;
         transform: scale(1);
     }
+
     /* 95%{
         transform: scale(1);
     } */
-    100%{
-        right:-3%;
+    100% {
+        right: -3%;
         transform: scale(1);
     }
 }
-.heading img{
+
+.heading img {
     height: 50px;
 }
-.heading h1{
+
+.heading h1 {
     padding: 3px;
     margin: auto;
 }
-.heading h4{
+
+.heading h4 {
     position: absolute;
     top: 100%;
 }
-.theme{
+
+.theme {
     display: flex;
 }
-.theme img{
+
+.theme img {
     height: 35px;
 }
-.theme h3{
+
+.theme h3 {
     padding: 3px;
     margin: auto;
 }
-.top{
+
+.top {
     display: flex;
     /* justify-content: space-between; */
 }
-.top div{
+
+.top div {
     margin: auto;
 }
-.text-gen-settings .include{
+
+.text-gen-settings .include {
     display: flex;
 }
-.in,.ty,.ti{
+
+.in,
+.ty,
+.ti {
     padding: 0 5px;
     text-align: right;
     margin-left: auto;
 }
-.in1,.ty1,.ti-15{
+
+.in1,
+.ty1,
+.ti-15 {
     margin-left: auto;
 }
-.text-gen-settings div{
+
+.text-gen-settings div {
     width: 100%;
     /* border: 2px solid black; */
 }
-.text-gen-settings div div{
+
+.text-gen-settings div div {
     width: fit-content;
 }
-.text-gen-settings div .selected{
+
+.text-gen-settings div .selected {
     border: 1px solid black;
     border-left: 3px solid rgb(0, 0, 54);
     border-radius: 3px;
     margin: 5px;
 }
-.text-gen-settings div div:hover{
+
+.text-gen-settings div div:hover {
     color: rgb(24, 18, 50);
     font-weight: 900;
     cursor: pointer;
 }
-.top .type{
+
+.top .type {
     display: flex;
 }
-.top .time{
+
+.top .time {
     display: flex;
 }
-input{
+
+input {
     border: none;
     width: 65px;
 }
-input:focus{
+
+input:focus {
     outline: none;
     border: none;
 }
-::placeholder,input { /* Chrome, Firefox, Opera, Safari 10.1+ */
+
+::placeholder,
+input {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: black;
-    opacity: 1; /* Firefox */
+    opacity: 1;
+    /* Firefox */
     font-weight: 600;
     font-size: 16px;
 }
-.Statistics-Settings-Box{
+
+.Statistics-Settings-Box {
     cursor: pointer;
 }
-.middle{
+
+.middle {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
     text-align: center;
     justify-content: center;
 }
-.language{
+
+.language {
     margin: 20px;
     cursor: pointer;
     /* width: fit-content; */
 }
-.language select{
+
+.language select {
     font-size: 18px;
 }
-.language .lan-icon{
+
+.language .lan-icon {
     border: 2px solid black !important;
     padding: 2px;
 }
-.Statistics{
+
+.Statistics {
     display: flex;
     font-size: 20px;
     justify-content: space-evenly;
@@ -202,7 +249,8 @@ input:focus{
     border-radius: 5px;
     padding: 5px 0;
 }
-.text{
+
+.text {
     height: 200px;
     overflow: scroll;
     line-height: 35px;
@@ -212,10 +260,12 @@ input:focus{
     border-radius: 5px;
     box-shadow: inset 3px 3px 400px rgb(234, 225, 225);
 }
-.text::-webkit-scrollbar{
+
+.text::-webkit-scrollbar {
     width: 0;
 }
-.active{
+
+.active {
 
     /*Style pattern 01*/
     /* background-color: rgb(58, 58, 58);
@@ -225,14 +275,16 @@ input:focus{
     font-size: larger;
     border-bottom: 7px solid black;
 }
-.correct{
+
+.correct {
     color: green;
 }
-.incorrect{
+
+.incorrect {
     color: red;
 }
 
-.input-field{
+.input-field {
     opacity: 0;
     height: 0;
     margin: 10px 0;
@@ -243,27 +295,33 @@ input:focus{
     background-color: rgba(138, 233, 138, 0.652);
     padding: 5px 0;
 }
-.input-field:focus{
+
+.input-field:focus {
     border: 2px solid green;
     background-color: rgba(138, 233, 138, 0.652);
 }
-.refresh{
+
+.refresh {
     cursor: pointer;
     padding: 5px;
     transition: 1s;
 }
-.refresh img{
+
+.refresh img {
     height: 30px;
 }
-.bottom{
+
+.bottom {
     margin-top: 30px;
     justify-self: center;
     text-align: center;
 }
-.bottom img{
+
+.bottom img {
     height: 15px;
 }
-.bottom a{
+
+.bottom a {
     text-decoration: none;
     color: black;
     font-weight: 600;
@@ -273,15 +331,16 @@ input:focus{
 /*Loading Animation*/
 
 @keyframes LoadingAnimation {
-    0%{
-        transform: translate(50%,50%);
+    0% {
+        transform: translate(50%, 50%);
         z-index: 1;
     }
-    100%{
+
+    100% {
         position: initial;
         top: auto;
         left: auto;
-        transform: translate(0,0);
+        transform: translate(0, 0);
         z-index: 0;
     }
 }
