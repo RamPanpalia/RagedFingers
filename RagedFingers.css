@@ -4,6 +4,14 @@
     font-family: consolas;
     /* border: 2px solid black; */
 }
+/*Things required to change theme*/
+/* *{
+    color: #1a0156 !important;
+    background-color: #b39ce9!important;
+}
+.text span,.text,.selected{
+    background-color: #d1bcff!important; 
+}  */
 
 body {
     height: 100%;
@@ -258,7 +266,8 @@ input {
     /* background-color: rgb(237, 236, 236); */
     padding: 10px;
     border-radius: 5px;
-    box-shadow: inset 3px 3px 400px rgb(234, 225, 225);
+    /* box-shadow: inset 3px 3px 400px rgb(234, 225, 225); */
+    /* background-color: white; */
 }
 
 .text::-webkit-scrollbar {

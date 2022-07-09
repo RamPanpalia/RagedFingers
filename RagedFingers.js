@@ -6,6 +6,15 @@ var mistakes = 0;
 var isTyping = false;
 var timer;
 
+/*
+Change The theme
+*/
+// document.getElementById('ThemeName').addEventListener("change",()=>{
+//   document.querySelector('*').setAttribute('style','background-color:#1a0156 !important')
+//   document.querySelector('*').setAttribute('style','background-color:#b39ce9 !important')
+//   document.querySelectorAll('.text span','.text','.selected').setAttribute('style','background-color:#d1bcff !important')
+// })
+
 const RANDOM_QUOTE_API_URL = "http://api.quotable.io/random";
 const RANDOM_JOKES_API_URL = "https://api.chucknorris.io/jokes/random";
 const RANDOM_WORD_API_URL = "https://random-word-api.herokuapp.com/word";
