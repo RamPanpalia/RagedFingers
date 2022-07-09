@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+
+<script>
+  const RANDOM_Jokes_API_URL = 'https://api.chucknorris.io/jokes/random';
+  const RANDOM_Word_API_URL = 'https://random-word-api.herokuapp.com/word';
+  const RANDOM_PARAGRAPH_API_URL = 'http://metaphorpsum.com/paragraphs/1/10'
+
+// function getRandomtext() {
+//     return (
+//         fetch(RANDOM_PARAGRAPH_API_URL)
+//         .then(response => response.text())
+//         .then(res=>document.write(res))
+//         // .then(data => JSON.stringify(data))
+//     )
+// }
+// getRandomtext();
+// var text=""
+// async function renderit(){
+//     const a = await getRandomtext()
+//     console.log(a)
+//     // return (a)
+// }
+// renderit();
+
+// const RANDOM_text_API_URL = 'https://api.chucknorris.io/jokes/random';
+
+//   function getRandomtext() {
+//     return fetch(RANDOM_text_API_URL)
+//       .then(response => response.json())
+//       .then(data => data.value)
+//   }
+  
+// //   var a=""
+//   async function renderNewtext() {
+//     const text = await getRandomtext()
+//     console.log(text)
+//     // a=text
+//   }
+  
+//   renderNewtext()
+//    console.log(a)
+
+// const axios = require("axios");
+
+function generateParagraph(){
+    fetch('../English_25k.json')
+    .then(res=>res.json())
+    .then(res=>console.log(res.words[10]))
+}
+generateParagraph()
+
+</script>
+
+</html>

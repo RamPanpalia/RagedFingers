@@ -138,8 +138,11 @@ body{
     border: 1px solid black;
     border-left: 3px solid rgb(0, 0, 54);
     border-radius: 3px;
+<<<<<<< HEAD
     /* border-bottom-left-radius: 0;
     border-top-left-radius: 0; */
+=======
+>>>>>>> 997f62012a81806604cc05b6175d2ced58d33491
     margin: 5px;
 }
 .text-gen-settings div div:hover{
