@@ -58,8 +58,9 @@ body{
 .cursor-ani{
     position: absolute;
     border: 2px solid black;
+    border-left: 4px solid black;
     height: 100%;
-    width: 4px;
+    width: 3px;
     top: 0;
     right: -3%;
     animation: text-ani 1.25s;
@@ -121,13 +122,29 @@ body{
 .in,.ty,.ti{
     padding: 0 5px;
     text-align: right;
+    margin-left: auto;
 }
 .in1,.ty1,.ti-15{
     margin-left: auto;
 }
+.text-gen-settings div{
+    width: 100%;
+    /* border: 2px solid black; */
+}
+.text-gen-settings div div{
+    width: fit-content;
+}
+.text-gen-settings div .selected{
+    border: 1px solid black;
+    border-left: 3px solid rgb(0, 0, 54);
+    border-radius: 3px;
+    /* border-bottom-left-radius: 0;
+    border-top-left-radius: 0; */
+    margin: 5px;
+}
 .text-gen-settings div div:hover{
-    color: rgb(49, 0, 245);
-    font-weight: 700;
+    color: rgb(24, 18, 50);
+    font-weight: 900;
     cursor: pointer;
 }
 .top .type{
@@ -156,7 +173,7 @@ input:focus{
 .middle{
     display: flex;
     flex-direction: column;
-    margin-top: 70px;
+    margin-top: 40px;
     text-align: center;
     justify-content: center;
 }
