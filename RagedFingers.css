@@ -127,7 +127,7 @@ body {
 }
 
 .heading h4 {
-    position: absolute;
+    position: absolute !important;
     top: 100%;
 }
 
@@ -373,19 +373,13 @@ input {
     /* height: 300px; */
     justify-content: space-around;
 }
-.top .heading,.theme,.text-gen-settings{
-    position: initial;
-    margin: 40px auto;
+.top .theme{
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 .text{
     font-size: 22px;
 }
-/* .theme{
-    display: none;
-}
-.text-gen-settings{
-    display: none;
-} */
 
 }
 
