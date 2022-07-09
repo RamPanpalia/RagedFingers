@@ -155,7 +155,7 @@ function resetStats(){
   document.querySelector('.Mistakes').innerHTML="0"
   document.querySelector('.text').innerHTML=""
   inputField.value="";
-  renderParagraph();
+  // renderParagraph();
   // alert("Stats Reset")
   location.reload();
   clearInterval(timer);

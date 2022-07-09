@@ -19,6 +19,12 @@ body{
     opacity: 0;
     animation: LoadingAnimation0 2.25s;
 }
+.LoadingAnimationInTextBox{
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+}
 @keyframes LoadingAnimation0 {
     0%{
         z-index: 1;
