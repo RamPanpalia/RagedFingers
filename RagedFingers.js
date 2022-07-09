@@ -62,10 +62,12 @@ async function renderParagraph() {
   const temp = await getParagraphFromDictionary();
   // var temp=textBox.innerHTML;
   textBox.innerHTML = "";
+  var temp2=""
   temp.split("").forEach((char) => {
     let span = `<span>${char}</span>`;
-    textBox.innerHTML += span;
+    temp2 += span;
   });
+  textBox.innerHTML=temp2;
   textBox.querySelectorAll("span")[0].classList.add("active");
   document.addEventListener("keydown", () => inputField.focus());
   textBox.addEventListener("click", () => inputField.focus());
@@ -143,9 +145,11 @@ function resetStats(){
   document.querySelector('.WPM').innerHTML="0"
   document.querySelector('.CPM').innerHTML="0"
   document.querySelector('.Mistakes').innerHTML="0"
+  document.querySelector('.text').innerHTML=""
   inputField.value="";
   renderParagraph();
   alert("Stats Reset")
+  location.reload();
   clearInterval(timer);
 }
 
