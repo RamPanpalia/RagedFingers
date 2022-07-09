@@ -39,9 +39,10 @@
                 <div class="include">
                     <div class="in1 in">Punctuations</div>
                     <div class="in2 in">Numbers</div>
+                    <div class="in3 in selected">Text Only</div>
                 </div>
                 <div class="type">
-                    <div class="ty ty1">Time</div>
+                    <div class="ty ty1 selected">Time</div>
                     <div class="ty ty2">Words</div>
                     <div class="ty ty3">Lorem</div>
                     <div class="ty ty4">Quotes</div>
@@ -51,7 +52,7 @@
                 <div class="time">
                     <div class="ti-15 ti">15</div>
                     <div class="ti-30 ti">30</div>
-                    <div class="ti-60 ti">60</div>
+                    <div class="ti-60 ti selected">60</div>
                     <div class="ti-120 ti">120</div>
                     <input class="ti-custom ti" placeholder="Custom"></input>
                     <div class="ti">in seconds.</div>
@@ -59,7 +60,7 @@
                 <div class="statistics-settings">
                     Show Live Statistics
                     <span class="Statistics-Settings-Box">
-                        <span class="Statistics-Yes">Yes</span>
+                        <span class="Statistics-Yes selected">Yes</span>
                         <span class="Statistics-No">No</span>
                     </span>
                 </div>
@@ -67,14 +68,46 @@
         </div>
         <div class="middle">
             <div class="language">
-                <select id="mySelect">
-                    <option value="English">
+                <select id="TextType">
+                    <option value="Dictionaries\English.json">
                         <span class="lan-icon">EN</span>
-                        <span class="lan">English</span>    
+                        <span class="lan">English</span>   
+                        <span class="difficulty">00</span>   
                     </option>
-                    <option value="Hindi">
+                    <option value="Dictionaries\English_1k.json">
+                        <span class="lan-icon">EN</span>
+                        <span class="lan">English</span>   
+                        <span class="difficulty">01</span>   
+                    </option>
+                    <option value="Dictionaries\English_5k.json">
+                        <span class="lan-icon">EN</span>
+                        <span class="lan">English</span>   
+                        <span class="difficulty">02</span>   
+                    </option>
+                    <option value="Dictionaries\English_10k.json">
+                        <span class="lan-icon">EN</span>
+                        <span class="lan">English</span>   
+                        <span class="difficulty">03</span>   
+                    </option>
+                    <option value="Dictionaries\English_25k.json">
+                        <span class="lan-icon">EN</span>
+                        <span class="lan">English</span>   
+                        <span class="difficulty">04</span>   
+                    </option>
+                    <option value="Dictionaries\English_450k.json">
+                        <span class="lan-icon">EN</span>
+                        <span class="lan">English</span>   
+                        <span class="difficulty">05</span>   
+                    </option>
+                    <option value="Dictionaries\Hindi.json">
                         <span class="lan-icon">HI</span>
                         <span class="lan">Hindi</span>    
+                        <span class="difficulty">00</span>   
+                    </option>
+                    <option value="Dictionaries\Hindi_1k.json">
+                        <span class="lan-icon">HI</span>
+                        <span class="lan">Hindi</span>    
+                        <span class="difficulty">01</span>   
                     </option>
                 </select>
             </div>
