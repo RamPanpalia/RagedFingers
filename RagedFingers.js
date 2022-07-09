@@ -6,10 +6,6 @@ var mistakes = 0;
 var isTyping = false;
 
 // alert()
-<<<<<<< HEAD
-=======
-
->>>>>>> 997f62012a81806604cc05b6175d2ced58d33491
 const RANDOM_QUOTE_API_URL = "http://api.quotable.io/random";
 const RANDOM_JOKES_API_URL = "https://api.chucknorris.io/jokes/random";
 const RANDOM_WORD_API_URL = "https://random-word-api.herokuapp.com/word";
