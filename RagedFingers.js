@@ -1,15 +1,23 @@
 const textBox = document.querySelector(".text"),
-  inputField = document.querySelector(".input-field");
+   inputField = document.querySelector(".input-field");
 var MaxTime = 60;
 var timeleft = MaxTime;
 var mistakes = 0;
 var isTyping = false;
+
+// alert()
 
 const RANDOM_QUOTE_API_URL = "http://api.quotable.io/random";
 const RANDOM_JOKES_API_URL = "https://api.chucknorris.io/jokes/random";
 const RANDOM_WORD_API_URL = "https://random-word-api.herokuapp.com/word";
 const RANDOM_PARAGRAPH_API_URL = "http://metaphorpsum.com/paragraphs/1/13";
 
+var MAIN_URL=document.querySelector('#TextType').value
+
+document.querySelector('#TextType').addEventListener("change",()=>{
+  MAIN_URL=document.querySelector('#TextType').value
+  renderParagraph();
+})
 //Completely random words
 function getRandomParagraph(length) {
   var result = "";
@@ -39,7 +47,7 @@ function generateRandomWord(length) {
 //Some meaningful paragraph
 
 async function getParagraphFromDictionary() {
-  const response = await fetch('English_25k.json');
+  const response = await fetch(MAIN_URL);
   const res = await response.json();
   var result=""
   for(i=0;i<250;i++){
@@ -148,7 +156,7 @@ function resetStats(){
   document.querySelector('.text').innerHTML=""
   inputField.value="";
   renderParagraph();
-  alert("Stats Reset")
+  // alert("Stats Reset")
   location.reload();
   clearInterval(timer);
 }
