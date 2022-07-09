@@ -138,8 +138,6 @@ body{
     border: 1px solid black;
     border-left: 3px solid rgb(0, 0, 54);
     border-radius: 3px;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
     margin: 5px;
 }
 .text-gen-settings div div:hover{
