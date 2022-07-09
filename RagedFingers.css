@@ -366,10 +366,11 @@ input {
     }
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1100px) {
 
 .top{
-    flex-direction: column;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
     /* height: 300px; */
     justify-content: space-around;
 }
