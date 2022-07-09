@@ -105,7 +105,7 @@ inputField.addEventListener("input", () => {
 
   if (charIndex < characters.length - 1 && timeleft > 0) {
     if (!isTyping) {
-      timer = setInterval(initTimer, 1000);
+      timer = setInterval(Timer, 1000);
       isTyping = true;
     }
     characters.forEach((span) => span.classList.remove("active"));
@@ -147,7 +147,7 @@ inputField.addEventListener("input", () => {
   }
 });
 
-function initTimer() {
+function Timer() {
   if (timeleft > 0) {
     timeleft--;
     document.querySelector(".time-left").innerText = timeleft;
